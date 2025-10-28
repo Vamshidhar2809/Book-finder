@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+📚 Book Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Book Finder is a modern, responsive web application built using React.js that allows users to search for millions of books from the Open Library API.
+It’s designed for Alex, a college student who wants to quickly find books for study or leisure — by title, author, or subject — with an elegant, user-friendly interface.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+✅ Search by Title, Author, or ISBN using Open Library’s public API
+✅ Sort Results by relevance or year
+✅ Predefined Quick Searches for popular topics (e.g., “Harry Potter”, “Machine Learning”)
+✅ Responsive Design — optimized for both desktop and mobile
+✅ Error Handling for empty results or network issues
+✅ Modern UI with glassmorphism, clean typography, and book-themed background
+✅ Accessible and Fast — no login, no dependencies, instant results
 
-### `npm start`
+🛠️ Tech Stack
+Category	Technology Used
+Frontend Framework	React.js (Create React App)
+Styling	CSS3 (Glassmorphism with background blur and gradient)
+Data Source	Open Library Search API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+State Management	React Hooks (useState, useEffect)
+Build Tool	npm / CRA (no Vite)
+⚙️ Installation & Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the repository:
 
-### `npm test`
+git clone https://github.com/Vamshidhar2809/Book-finder.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Navigate into the project folder:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd book-finder
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies:
 
-### `npm run eject`
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Open in your browser:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🌐 API Reference
 
-### Code Splitting
+Base URL:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+https://openlibrary.org/search.json?title={bookTitle}
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Example:
 
-### Making a Progressive Web App
+https://openlibrary.org/search.json?title=harry%20potter
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Response includes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Title
 
-### Deployment
+Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+First Publish Year
 
-### `npm run build` fails to minify
+Cover Image ID (for displaying book cover)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+💡 How It Works
+
+User enters a book title, author, or keyword in the search bar.
+
+React fetches data from Open Library API using fetch().
+
+Results are displayed dynamically with cover images, author names, and publication year.
+
+Users can switch between sort modes (Relevance / Year).
+
+If no books are found, a friendly message is shown instead of a blank screen.
+
+🎨 UI Preview
+
+The design features:
+
+Soft blurred glass container for focus
+
+Book library background image
+
+Highlighted yellow-accented buttons for search and filters
+
+Subtle shadows and rounded corners for modern feel
+
+🧠 Future Improvements
+
+Add pagination or “Load more” button
+
+Implement book detail modal (description, rating, preview)
+
+Allow saving favorites using localStorage
+
+Integrate dark/light mode toggle
+
+🧪 Testing
+
+Tested on Chrome, Edge, and Firefox
+
+Responsive across 320px to 1440px viewports
+
+Tested for empty input, network error, and invalid searches
+
+👨‍💻 Developed By
+
+A K Vamshidhar Reddy
+Passionate about Frontend, Full-Stack Development, and UI Design.
+Built this project as part of a technical assessment to demonstrate clean code, creative design, and problem-solving using AI guidance.
+
+🤖 AI Assistance Acknowledgment
+
+Some parts of the project were refined with the help of ChatGPT (OpenAI) — for design ideas, error handling, and UI improvements — while the implementation and logic were coded manually.
